@@ -1,0 +1,572 @@
+.marquee {
+    position: absolute; /* Position it absolutely within the parent container */
+    bottom: -20px; /* Adjust to overlap both the h2 and button */
+    left: 100%; /* Start from the right */
+    transform: translateX(0); /* Initial position */
+    font-family: "Roboto", sans-serif;
+    font-size: 50pt;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 1; /* Ensure it appears above other elements */
+    text-align: center;
+    white-space: nowrap; /* Prevent text from wrapping */
+    animation: scroll-left 10s linear infinite; /* Add scrolling animation */
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(0); /* Start at the right */
+    }
+    to {
+        transform: translateX(-100%); /* Move to the left */
+    }
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 0;
+    padding: 50px 100px;
+    width: 100%; /* Ensure the header spans the full width */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+}
+.hera {
+    position: relative; /* Add relative positioning */
+    background-color: black;
+    margin: 0;
+}
+button.light, button.dark {
+    cursor: pointer;
+    border: none;
+    background: none;
+    float: left;
+    margin: 0;
+    color: inherit;
+}
+.introduction {
+    flex: 8;
+}
+.introduction button {
+    font-size: 15pt;
+}
+.introduction hr {
+    width:1cm; 
+    justify-content: flex-start;
+    margin-left: 0px;
+}
+.introduction h1 {
+    font-family: "Playfair", serif;
+    font-weight: 300;
+    font-size: 40pt;
+    margin: 0;
+    color: rgb(255, 255, 255);
+}
+.introduction h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-size: 18pt;
+    color: rgb(255, 255, 255);
+}
+.introduction p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-size: 11pt;
+    line-height: 1.5;
+    letter-spacing: 0.5pt;
+    color: rgb(255, 255, 255);
+    width: 70%;
+}
+.center {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    padding:0;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 50px;
+}
+.center img {
+    width: 80%;
+    height: auto;
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    border-top-right-radius: 45%;
+    border-top-left-radius: 45%;
+    object-fit: cover;
+    aspect-ratio: 10 / 10;
+    animation: fadeIn 1s ease-in;
+    padding: 2px;
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 0;
+    margin: 0 auto;
+    background-color: rgb(27, 27, 27);
+}
+.project-title {
+    flex: 4;
+
+}
+.project-title h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 100pt;
+    color: rgb(255, 255, 255);
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+.project-carousel {
+    flex: 6;
+    padding: 60px;
+}
+
+* {box-sizing:border-box}
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.mySlides {
+    display: none;
+    text-align: center;
+}
+
+.mySlides img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.numbertext {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.text {
+    display: flex;
+    max-width: 100%;
+    flex-direction: row;
+    color: white;
+    font-size: 15px;
+    padding-top: 20px;
+    margin: 0;
+    position: relative;
+    bottom: 8px;
+    width: 100%;
+    text-align: left;
+}
+.project-info, .project-name {
+    flex: 1;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+.project-info a, .project-info p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    font-size: 12pt;
+    line-height: 1.5;
+    letter-spacing: 0.5pt;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+.project-name h3{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 20pt;
+    color: rgb(255, 255, 255);
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: right;
+    align-self: flex-end;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 35%;
+    width: auto;
+    margin-top: -50px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: gray;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot.active {
+    background-color: white;
+}
+.service1 {
+    display: flex;
+    flex-direction: column;
+    column-gap: 50px;
+}
+.service-list {
+    display: flex;
+    max-width: 100%;
+    flex-direction: column;
+    padding: 100px;
+}
+.service-header {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Playfair', serif;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-bottom: 50px;;
+}
+.service-header h2 {
+    font-size: 40pt;
+    margin: 0;
+}
+.service-header h5 {
+    font-size: 20pt;
+    font-weight: 100;
+    margin: 0;
+}
+.service, .servic{
+    display:flex;
+    flex-direction: row;
+    padding: 50px 20px;
+}
+.service img {
+    width: 50%;
+    float: left;
+    aspect-ratio: 5 / 4;
+}
+.service h3, .servic h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 25pt;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    justify-content: center;
+    align-self: center;
+    margin: 0 auto;
+}
+
+.servic img {
+    width: 50%;
+    float: right;
+    aspect-ratio: 5 / 4;
+}
+.offers {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: 0 auto;
+    flex: 1;
+    column-gap: 20px;
+    align-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: auto;
+    padding: 50px 100px;
+}
+.offers-list {
+   flex: 6;
+}
+.offers-header {
+    flex: 4;
+}
+
+.offers-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 80vh;
+}
+.offers-list p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-size: 12pt;
+    line-height: 2.5;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    text-align: left;
+}
+.offers-header {
+    border-left: 2px solid white;
+    align-content: flex-end;
+    height: 80vh;
+}
+.offers-header h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 80pt;
+    color: rgb(255, 255, 255);
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 0 auto;
+    padding: 50px;
+}
+.motto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 0;  
+    border-bottom: white solid 1px;
+}
+.logo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 0 auto;
+    
+}
+.logo-container img {
+    width: 5%;
+}
+.motto h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 45pt;
+    color: rgb(255, 255, 255);
+    padding-top: 50px;
+    margin: 0;
+}
+.motto p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    font-size: 12pt;
+    line-height: 1.5;
+    letter-spacing: 0.5pt;
+    color: rgb(255, 255, 255);
+    width: 55%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    padding-bottom: 50px;
+}
+.links {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    padding: 0 60px;
+}
+#urlemail, #mystudio {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+}
+#urlemail a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    font-size: 15pt;
+    color: rgb(255, 255, 255);
+    padding-bottom: 20px;
+    text-decoration: none;
+}
+#urlemail a:hover {
+    text-decoration: overline;
+}
+.copyrighthere h4 {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    font-size: 12pt;
+}
+#mystudio {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+}
+#mystudio p {
+    font-weight: 600;
+    font-size: 15pt;
+    margin: 0;
+}
+#mystudio h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 50pt;
+    margin: 0;
+}
+
+/* light-mode */
+body.light-mode {
+    background-color: rgb(255, 255, 255);
+}
+body.light-mode .hera {
+    background-color: rgb(255, 255, 255);
+}
+body.light-mode .introduction h1 {
+    color: rgb(27, 27, 27);
+    font-weight: 300;
+}
+body.light-mode .introduction h2 {
+    color: rgb(27, 27, 27);
+    font-weight: 300;
+}
+body.light-mode .introduction p {
+    color: rgb(27, 27, 27);
+    font-weight: 300;
+}
+body.light-mode .project {
+    background-color: rgb(255, 255, 255);
+}
+body.light-mode .project-title h2 {
+    color: rgb(27, 27, 27);
+    font-weight: 300;
+}
+body.light-mode .project-info a, body.light-mode .project-info p {
+    color: rgb(0, 0, 0);
+    font-weight: 300;
+}
+
+body.light-mode .numbertext {
+    color: rgb(27, 27, 27);
+    background-color: white;
+}
+
+body.light-mode .text {
+    color: rgb(0, 0, 0);
+}
+body.light-mode .project-name h3{
+    color: rgb(0, 0, 0);
+}
+body.light-mode .prev, body.light-mode .next {
+    color: rgb(0, 0, 0);
+    background-color: white;
+}
+
+body.light-mode .prev:hover, body.light-mode .next:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+body.light-mode .dot {
+    background-color: rgb(0, 0, 0);
+}
+
+body.light-mode .dot.active {
+    background-color: rgb(27, 27, 27);;
+}
+body.light-mode .service-list {
+    background-color: rgb(212, 212, 191);
+}
+body.light-mode .service-header {
+    color: rgb(27, 27, 27);;
+}
+body.light-mode .service h3, body.light-mode .servic h3 {
+    color:rgb(27, 27, 27);;
+    font-weight: 300;
+}
+
+body.light-mode  .offers-list p {
+    color: rgb(0, 0, 0);
+}
+body.light-mode .offers-header {
+    border-left: 2px solid rgb(0, 0, 0);
+}
+body.light-mode .offers-header h2 {
+    color: rgb(0, 0, 0);
+    font-weight: 300;
+}
+body.light-mode  .motto {
+    border-bottom: rgb(2, 2, 2) solid 1px;
+}
+body.light-mode .motto h6 {
+    color: rgb(27, 27, 27);
+    font-weight: 300;
+}
+body.light-mode .motto p {
+    color: rgb(27, 27, 27);
+    font-weight: 300;
+}
+body.light-mode #urlemail a {
+    color: rgb(27, 27, 27);
+    font-weight: 300;
+}
+
+body.light-mode .copyrighthere h4 {
+    color: rgb(0, 0, 0);
+    font-weight: 300;
+}
+body.light-mode #mystudio {
+    color:  rgb(0, 0, 0);
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
